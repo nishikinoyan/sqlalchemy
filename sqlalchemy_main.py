@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, create_engine
+﻿from sqlalchemy import Column, String, create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import hashlib
@@ -53,7 +53,7 @@ def update_user(update_user_id,update_user_password,update_after_user_password):
 
 
 if __name__ == '__main__':
-    engine_sql = create_engine('mysql+pymysql://flask:chen89726@47.74.240.209:3306/flask_login_test')
+    engine_sql = create_engine('数据库+驱动器://数据库用户:数据库密码@数据库地址:数据库端口/数据库名')
     DBsession = sessionmaker(bind=engine_sql)
     Base.metadata.create_all(engine_sql)
 
